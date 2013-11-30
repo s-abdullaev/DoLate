@@ -1,0 +1,8 @@
+C:\HackingTheCity\DoLate\Payments\bin\Debug\Payments.dll
+C:\HackingTheCity\DoLate\Payments\bin\Debug\Payments.pdb
+C:\HackingTheCity\DoLate\Payments\bin\Debug\Payments.xml
+C:\HackingTheCity\DoLate\Payments\obj\Debug\Payments.Resources.resources
+C:\HackingTheCity\DoLate\Payments\obj\Debug\Payments.vbproj.GenerateResource.Cache
+C:\HackingTheCity\DoLate\Payments\obj\Debug\Payments.dll
+C:\HackingTheCity\DoLate\Payments\obj\Debug\Payments.xml
+C:\HackingTheCity\DoLate\Payments\obj\Debug\Payments.pdb

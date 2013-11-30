@@ -1,0 +1,14 @@
+C:\HackingTheCity\DoLate\View\bin\Debug\View.exe.config
+C:\HackingTheCity\DoLate\View\bin\Debug\View.exe
+C:\HackingTheCity\DoLate\View\bin\Debug\View.pdb
+C:\HackingTheCity\DoLate\View\bin\Debug\View.xml
+C:\HackingTheCity\DoLate\View\obj\Debug\MainWindow.baml
+C:\HackingTheCity\DoLate\View\obj\Debug\MainWindow.g.vb
+C:\HackingTheCity\DoLate\View\obj\Debug\Application.g.vb
+C:\HackingTheCity\DoLate\View\obj\Debug\View_MarkupCompile.cache
+C:\HackingTheCity\DoLate\View\obj\Debug\View.g.resources
+C:\HackingTheCity\DoLate\View\obj\Debug\View.Resources.resources
+C:\HackingTheCity\DoLate\View\obj\Debug\View.vbproj.GenerateResource.Cache
+C:\HackingTheCity\DoLate\View\obj\Debug\View.exe
+C:\HackingTheCity\DoLate\View\obj\Debug\View.xml
+C:\HackingTheCity\DoLate\View\obj\Debug\View.pdb
