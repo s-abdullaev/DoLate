@@ -5,31 +5,31 @@ Imports System.ComponentModel
 
 Public Class NotificationWindow
 
-    Private tasks As List(Of DummyTask)
+    Private outlookClient As New Tasks.OutlookSync
 
 
     Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
-        tasks = DummyTasks.GetTasks
+        ' tasks = DummyTasks.GetTasks
 
 
-        lstTasks.ItemsSource = tasks
+        'lstTasks.ItemsSource = tasks
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As RoutedEventArgs)
         Dim t As DummyTask = New DummyTask() With {.Title = txtTask.Text}
 
-        tasks.Add(t)
-        lstTasks.ItemsSource = tasks
+        'tasks.Add(t)
+        'lstTasks.ItemsSource = tasks
 
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As RoutedEventArgs)
         Dim btn As Button = sender
-        Dim delTask As DummyTask = tasks.FirstOrDefault(Function(c) c.Id = btn.Tag)
+        '  Dim delTask As DummyTask = tasks.FirstOrDefault(Function(c) c.Id = btn.Tag)
 
-        If delTask IsNot Nothing Then tasks.Remove(delTask)
+        ' If delTask IsNot Nothing Then tasks.Remove(delTask)
 
-        lstTasks.ItemsSource = tasks
+        '  lstTasks.ItemsSource = tasks
     End Sub
 End Class
 
