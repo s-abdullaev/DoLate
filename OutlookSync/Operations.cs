@@ -40,8 +40,15 @@ namespace Tasks
             set
             {
                 Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                config.AppSettings.Settings.Add("RatePerHour", value.ToString());
-                config.Save(ConfigurationSaveMode.Modified);
+                if (ConfigurationManager.AppSettings["RatePerHour"] != null)
+                {
+                    config.AppSettings.Settings["RatePerHour"].Value = value.ToString();
+                }
+                else
+                {
+                    config.AppSettings.Settings.Add("RatePerHour", value.ToString());
+                    config.Save(ConfigurationSaveMode.Modified);                    
+                }
             }
         }
     }
