@@ -58,3 +58,5 @@ F:\BackUp\DoLate\DoLate\View\obj\Debug\View.exe
 F:\BackUp\DoLate\DoLate\View\obj\Debug\View.xml
 F:\BackUp\DoLate\DoLate\View\obj\Debug\View.pdb
 F:\BackUp\DoLate\DoLate\View\obj\Debug\View.vbprojResolveAssemblyReference.cache
+F:\BackUp\DoLate\DoLate\View\bin\Debug\OutlookSync.exe
+F:\BackUp\DoLate\DoLate\View\bin\Debug\OutlookSync.pdb
