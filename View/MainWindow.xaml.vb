@@ -12,12 +12,7 @@ Public Class NotificationWindow
     Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
         tasks = outlookClient.AllTasks
 
-
-
-        ' tasks = DummyTasks.GetTasks
-
-
-        'lstTasks.ItemsSource = tasks
+        lstTasks.ItemsSource = tasks
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As RoutedEventArgs)

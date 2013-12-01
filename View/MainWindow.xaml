@@ -48,8 +48,8 @@
                                             <RowDefinition></RowDefinition>
                                             <RowDefinition></RowDefinition>
                                         </Grid.RowDefinitions>
-                                        <CheckBox Grid.Column="0" Grid.Row="0" IsChecked="{Binding IsFinished, Mode=TwoWay}" Margin="5"></CheckBox>
-                                        <TextBlock FontSize="20" Height="35"  Grid.Column="1"  Grid.Row="0" TextAlignment="Left" Margin="10 5 5 5" Text="{Binding Title}"/>
+                                        <CheckBox Grid.Column="0" Grid.Row="0" Margin="5"></CheckBox>
+                                        <TextBlock FontSize="20" Height="35"  Grid.Column="1"  Grid.Row="0" TextAlignment="Left" Margin="10 5 5 5" Text="{Binding Subject}"/>
                                         <Button Click="btnDelete_Click" Tag="{Binding Id}" Grid.Column="2" BorderBrush="Transparent" Background="White"  Margin="2 2 2 2" Width="40" Height="40" Focusable="False" >
                                     <Button.Content>
                                         <Image Width="28" Height="28" Source="Images/delete.png"></Image>
