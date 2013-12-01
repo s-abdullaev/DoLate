@@ -2,6 +2,7 @@
 Imports System.Windows
 Imports System.Windows.Threading
 Imports System.ComponentModel
+Imports Tasks
 
 Public Class NotificationWindow
 
@@ -9,6 +10,8 @@ Public Class NotificationWindow
     Private tasks As New List(Of DummyTask)
     Private tasksXdoc As XDocument
     Private curDueDate As Date = DateAdd(DateInterval.Day, 2, Now)
+    Private oclient As New Tasks.OutlookSync
+
 
     Private Sub RefreshList()
         Dim qry = (From t In tasks Order By t.DueDate Ascending Select t)
@@ -25,6 +28,18 @@ Public Class NotificationWindow
 
     Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
         tasksXdoc = XDocument.Load("Tasks.xml")
+
+        For Each t In oclient.AllTasks
+            Dim task As New DummyTask
+            task.MyXDoc = tasksXdoc
+            task.Id = t.Id
+            task.DueDate = t.DueDate
+            task.IsFinished = t.IsFinished
+            task.Subject = t.Subject
+            task.Body = t.Body
+
+            AddTaskItem(task)
+        Next
 
         lblTotalPaid.Text = "£" & tasksXdoc.Root.@TotalPaid
 
@@ -54,6 +69,8 @@ Public Class NotificationWindow
     End Sub
 
     Private Sub AddTaskItem(t As DummyTask)
+        If tasks.Any(Function(c) c.Id = t.Id) Then Return
+
         tasks.Add(t)
 
         tasksXdoc.Root.Add(t.GetXML)
