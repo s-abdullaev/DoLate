@@ -4,11 +4,13 @@ Imports System.Windows.Threading
 Imports System.ComponentModel
 
 Public Class NotificationWindow
+
     Private tasks As List(Of DummyTask)
 
 
     Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
         tasks = DummyTasks.GetTasks
+
 
         lstTasks.ItemsSource = tasks
     End Sub

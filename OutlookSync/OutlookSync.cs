@@ -7,7 +7,7 @@ using Outlook = Microsoft.Office.Interop.Outlook;
 
 namespace Tasks
 {
-    class OutlookSync
+    public class OutlookSync
     {
         private Outlook._Application outlookObj = new Outlook.Application();
 
@@ -38,10 +38,7 @@ namespace Tasks
         {
             task.Delete();
         }
-
-
-
-
+        
         static int Main(string[] args)
         {
             Operations.RatePerHour = 5;
@@ -57,11 +54,7 @@ namespace Tasks
             //myOutlook.c_tasks();
             //myOutlook.iGetAllTaskItems();
 
-
-
-
-
-
+            
             return 0;
         }
     }
