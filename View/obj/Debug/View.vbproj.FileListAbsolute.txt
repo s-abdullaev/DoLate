@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 F:\BackUp\DoLate\DoLate\View\obj\Debug\MainWindow.baml
 F:\BackUp\DoLate\DoLate\View\obj\Debug\Resources\Icons.baml
 F:\BackUp\DoLate\DoLate\View\obj\Debug\MainWindow.g.vb
@@ -57,3 +58,19 @@ F:\BackUp\DoLate\DoLate\View\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dl
 F:\BackUp\DoLate\DoLate\View\obj\Debug\View.exe
 F:\BackUp\DoLate\DoLate\View\obj\Debug\View.xml
 F:\BackUp\DoLate\DoLate\View\obj\Debug\View.pdb
+=======
+C:\HackingTheCity\DoLate\View\bin\Debug\View.exe.config
+C:\HackingTheCity\DoLate\View\bin\Debug\View.exe
+C:\HackingTheCity\DoLate\View\bin\Debug\View.pdb
+C:\HackingTheCity\DoLate\View\bin\Debug\View.xml
+C:\HackingTheCity\DoLate\View\obj\Debug\MainWindow.baml
+C:\HackingTheCity\DoLate\View\obj\Debug\MainWindow.g.vb
+C:\HackingTheCity\DoLate\View\obj\Debug\Application.g.vb
+C:\HackingTheCity\DoLate\View\obj\Debug\View_MarkupCompile.cache
+C:\HackingTheCity\DoLate\View\obj\Debug\View.g.resources
+C:\HackingTheCity\DoLate\View\obj\Debug\View.Resources.resources
+C:\HackingTheCity\DoLate\View\obj\Debug\View.vbproj.GenerateResource.Cache
+C:\HackingTheCity\DoLate\View\obj\Debug\View.exe
+C:\HackingTheCity\DoLate\View\obj\Debug\View.xml
+C:\HackingTheCity\DoLate\View\obj\Debug\View.pdb
+>>>>>>> 8880d2d46848a2f9c4f84048834fa27be3ab42ad
