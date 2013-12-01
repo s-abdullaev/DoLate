@@ -1,10 +1,2 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Tasks>
-  <Task>
-    <Id>1</Id>
-    <IsFinished>True</IsFinished>
-    <Subject>Hello, world</Subject>
-    <Body>heh</Body>
-    <DueDate>11/30/2013</DueDate>
- </Task>
- </Tasks>
+﻿<Tasks TotalPaid="12.1">
+</Tasks>

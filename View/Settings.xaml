@@ -1,0 +1,158 @@
+﻿<controls:MetroWindow x:Class="Settings"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:c="http://metro.mahapps.com/winfx/xaml/shared"
+                      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+                      xmlns:Behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+                      ResizeMode="NoResize"
+    Title="Settings" Height="400" Width="400" Loaded="MetroWindow_Loaded">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <i:Interaction.Behaviors>
+        <Behaviours:BorderlessWindowBehavior AutoSizeToContent="False" AllowsTransparency="True" />
+    </i:Interaction.Behaviors>
+    <Grid>
+        <Border Grid.Row="0" BorderThickness="1" BorderBrush="Black">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="180"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock FontSize="14" FontWeight="Bold" Margin="5,10" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Text="{Binding ElementName=sldRate,Path=Value,StringFormat=Donation per Day: £{0:#.##}}" Height="20"></TextBlock>
+                <Slider Margin="5,11" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" x:Name="sldRate" Maximum="5" Minimum="0" HorizontalAlignment="Stretch" SmallChange="0.1" Height="18" />
+
+                <TextBlock FontSize="14" FontWeight="Bold" Margin="5,10" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Height="20" Text="Select Organization:"></TextBlock>
+                <ListBox x:Name="lstCharities" Grid.Column="1" Grid.Row="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" VerticalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="300">
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="{x:Type ListBoxItem}">
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="{x:Null}" />
+                                    <Setter Property="Focusable" Value="False" />
+                                </Trigger>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="{x:Null}" />
+                                    <Setter Property="BorderBrush" Value="{x:Null}" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                    <ListBoxItem>
+                        <ListBoxItem.Content>
+                            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <RadioButton  Checked="chkUnicef_Checked" Grid.Column="0" GroupName="rdCharities" x:Name="chkCR"></RadioButton>
+                                <Image HorizontalAlignment="Left" Width="130" Height="70" Grid.Column="1" Source="Images/cancerResearch.jpg" />
+                                <TextBlock Grid.Column="2"></TextBlock>
+                                <Separator Grid.ColumnSpan="3" Grid.Row="1" BorderBrush="DarkGray" BorderThickness="1" HorizontalAlignment="Stretch" />
+                            </Grid>
+                        </ListBoxItem.Content>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <ListBoxItem.Content>
+                            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <RadioButton  Checked="chkUnicef_Checked" Grid.Column="0" GroupName="rdCharities" x:Name="chkBH"></RadioButton>
+                                <Image Margin="10 0 0 0" HorizontalAlignment="Left" Width="40" Height="70" Grid.Column="1" Source="Images/BritishHeart.png" />
+                                <TextBlock Grid.Column="2"></TextBlock>
+                                <Separator Grid.ColumnSpan="3" Grid.Row="1" BorderBrush="DarkGray" BorderThickness="1" HorizontalAlignment="Stretch" />
+                            </Grid>
+                        </ListBoxItem.Content>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <ListBoxItem.Content>
+                            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <RadioButton Checked="chkUnicef_Checked" Grid.Column="0" GroupName="rdCharities" x:Name="chkUnicef"></RadioButton>
+                                <Image Margin="10 0 0 0" HorizontalAlignment="Left" Width="70" Height="70" Grid.Column="1" Source="Images/unicef.jpg" />
+                                <TextBlock Grid.Column="2"></TextBlock>
+                                <Separator Grid.ColumnSpan="3" Grid.Row="1" BorderBrush="DarkGray" BorderThickness="1" HorizontalAlignment="Stretch" />
+                            </Grid>
+                        </ListBoxItem.Content>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <ListBoxItem.Content>
+                            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <RadioButton  Checked="chkUnicef_Checked" Grid.Column="0" GroupName="rdCharities" x:Name="chkWater"></RadioButton>
+                                <Image Margin="10 0 0 0" HorizontalAlignment="Left" Width="70" Height="70" Grid.Column="1" Source="Images/Water.jpg" />
+                                <TextBlock Grid.Column="2"></TextBlock>
+                                <Separator Grid.ColumnSpan="3" Grid.Row="1" BorderBrush="DarkGray" BorderThickness="1" HorizontalAlignment="Stretch" />
+                            </Grid>
+                        </ListBoxItem.Content>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <ListBoxItem.Content>
+                            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <RadioButton Checked="chkUnicef_Checked" Grid.Column="0" GroupName="rdCharities" x:Name="chkWikipedia"></RadioButton>
+                                <Image Margin="10 0 0 0" HorizontalAlignment="Left" Width="70" Height="70" Grid.Column="1" Source="Images/wikipedia.jpg" />
+                                <TextBlock Grid.Column="2"></TextBlock>
+                                <Separator Grid.ColumnSpan="3" Grid.Row="1" BorderBrush="DarkGray" BorderThickness="1" HorizontalAlignment="Stretch" />
+                            </Grid>
+                        </ListBoxItem.Content>
+                    </ListBoxItem>
+                </ListBox>
+                <Border Grid.ColumnSpan="3" Grid.Row="2" BorderBrush="Gray" BorderThickness="1">
+                    <Button x:Name="Save" Click="Save_Click" HorizontalAlignment="Right" Margin="5" Content="Save" Width="100"></Button>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</controls:MetroWindow>

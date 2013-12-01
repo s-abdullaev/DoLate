@@ -17,8 +17,31 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    <Grid>
-      <Border Grid.Row="0" BorderThickness="1" Background="Beige" BorderBrush="Black" CornerRadius="5">
+      <Grid>
+        <Grid.Resources>
+            <Style x:Key="MyTextBlock" TargetType="{x:Type TextBlock}">
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding IsFinished}" Value="True">
+                        <Setter Property="TextDecorations">
+                            <Setter.Value>
+                                <TextDecorationCollection>
+                                    <TextDecoration Location="Strikethrough" >
+                                        <TextDecoration.Pen>
+                                            <Pen Thickness="2" Brush="Black"/>
+                                        </TextDecoration.Pen>
+                                    </TextDecoration>
+                                </TextDecorationCollection>
+                            </Setter.Value>
+                        </Setter>
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding IsFinished}" Value="False">
+                        <Setter Property="TextDecorations" Value="None"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+
+        </Grid.Resources>
+      <Border Grid.Row="0" BorderThickness="1" Background="Beige" BorderBrush="Black">
                     <!--<TextBlock TextWrapping="Wrap" Margin="5">Task List</TextBlock>-->
             <StackPanel Margin="5">
                     <ListBox x:Name="lstTasks" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" VerticalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="200">
@@ -40,7 +63,7 @@
                             <DataTemplate>
                                 <Grid HorizontalAlignment="Stretch" VerticalAlignment="Center">
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="45"></ColumnDefinition>
+                                            <ColumnDefinition Width="48"></ColumnDefinition>
                                             <ColumnDefinition></ColumnDefinition>
                                             <ColumnDefinition Width="45"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
@@ -48,10 +71,16 @@
                                             <RowDefinition></RowDefinition>
                                             <RowDefinition></RowDefinition>
                                         </Grid.RowDefinitions>
-                                        <CheckBox Grid.Column="0" Grid.Row="0" Margin="5"></CheckBox>
-                                        <TextBlock FontSize="20" Height="35"  Grid.Column="1"  Grid.Row="0" TextAlignment="Left" Margin="10 5 5 5" Text="{Binding Subject}"/>
-                                        <Button Click="btnDelete_Click" Tag="{Binding Id}" Grid.Column="2" BorderBrush="Transparent" Background="White"  Margin="2 2 2 2" Width="40" Height="40" Focusable="False" >
-                                    <Button.Content>
+                                <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0" Margin="5">
+                                    <CheckBox IsChecked="{Binding Path=IsFinished, Mode=TwoWay}"></CheckBox>
+                                    <Image Source="Images/alert.png" Width="14" Height="14" Visibility="{Binding IsAlertVisible}"></Image>
+                                </StackPanel>
+                                   <StackPanel Orientation="Vertical"  Margin="6 5 5 5"  Grid.Column="1"  Grid.Row="0" >
+                                            <TextBlock FontSize="14" TextAlignment="Left" Text="{Binding Subject}" Foreground="{Binding BGColor}" Style="{StaticResource MyTextBlock}"/>
+                                            <TextBlock FontSize="10" FontStyle="Italic" TextAlignment="Left" Text="{Binding Path=DueDate, StringFormat=Due Date: {0}}"/>
+                                        </StackPanel>
+                                        <Button Click="btnDelete_Click" Tag="{Binding Id}" Grid.Column="2" BorderBrush="Transparent" Background="Transparent"  Margin="2 2 2 2" Width="40" Height="40" Focusable="False" >
+                                      <Button.Content>
                                         <Image Width="28" Height="28" Source="Images/delete.png"></Image>
                                     </Button.Content>
                                 </Button>
@@ -65,9 +94,15 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition></ColumnDefinition>
                             <ColumnDefinition Width="45"></ColumnDefinition>
+                            <ColumnDefinition Width="45"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <TextBox x:Name="txtTask" Margin="5" FontSize="20" BorderBrush="Gray" HorizontalAlignment="Stretch"></TextBox>
-                        <Button x:Name="btnAdd" Click="btnAdd_Click" Grid.Column="1" Margin="2 2 2 2" Width="40" Height="40" Background="White" BorderBrush="Transparent" Focusable="False">
+                        <Button x:Name="btnCalendar" Click="btnCalendar_Click" Grid.Column="1" Margin="2 2 2 2" Width="40" Height="40" Background="White" BorderBrush="Transparent" Focusable="False">
+                            <Button.Content>
+                                <Image Width="26" Height="26" Source="Images/calendar.png"></Image>
+                            </Button.Content>
+                        </Button>
+                        <Button x:Name="btnAdd" IsDefault="True"  Click="btnAdd_Click" Grid.Column="2" Margin="2 2 2 2" Width="40" Height="40" Background="White" BorderBrush="Transparent" Focusable="False">
                             <Button.Content>
                                 <Image Width="16" Height="16" Source="Images/add.png"></Image>
                             </Button.Content>
@@ -80,13 +115,33 @@
                             <ColumnDefinition></ColumnDefinition>
                             <ColumnDefinition Width="45"></ColumnDefinition>
                             <ColumnDefinition Width="45"></ColumnDefinition>
+                            <ColumnDefinition Width="45"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Column="1" BorderBrush="Transparent" Background="White"  Margin="2 2 2 2" Width="40" Height="40" Focusable="False" >
+                        <Grid Grid.Column="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            
+                            <Border x:Name="bdDueAmount" Grid.Column="0" Margin="2" BorderBrush="Gray" BorderThickness="1">
+                                <TextBlock x:Name="lblDueAmount" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold">£1.20</TextBlock>
+                            </Border>
+                            <Border x:Name="bdTotalPaid" Grid.Column="1" Margin="2" BorderBrush="Gray" BorderThickness="1">
+                                <TextBlock x:Name="lblTotalPaid" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold">£12.00</TextBlock>
+
+                            </Border>
+                        </Grid>                     
+                        <Button x:Name="btnPiggy" Click="btnPiggy_Click" Grid.Column="1" BorderBrush="Transparent" Background="White"  Margin="2 2 2 2" Width="40" Height="40" Focusable="False" >
                             <Button.Content>
                                 <Image Width="30" Height="30" Source="Images/piggy.png"></Image>
                             </Button.Content>
                         </Button>
-                        <Button Grid.Column="2" BorderBrush="Transparent" Background="White"  Margin="2 2 2 2" Width="40" Height="40" Focusable="False" >
+                        <Button x:Name="btnClear" Click="btnClear_Click" Grid.Column="2" BorderBrush="Transparent" Background="White"  Margin="2 2 2 2" Width="40" Height="40" Focusable="False" >
+                            <Button.Content>
+                                <Image Width="28" Height="28" Source="Images/broom.png"></Image>
+                            </Button.Content>
+                        </Button>
+                        <Button x:Name="btnSettings" Click="btnSettings_Click" Grid.Column="3" BorderBrush="Transparent" Background="White"  Margin="2 2 2 2" Width="40" Height="40" Focusable="False" >
                             <Button.Content>
                                 <Image Width="28" Height="28" Source="Images/settings.png"></Image>
                             </Button.Content>
