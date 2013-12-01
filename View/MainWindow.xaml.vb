@@ -2,13 +2,18 @@
 Imports System.Windows
 Imports System.Windows.Threading
 Imports System.ComponentModel
+Imports Microsoft.Office.Interop.Outlook
 
 Public Class NotificationWindow
 
     Private outlookClient As New Tasks.OutlookSync
-
+    Private tasks As List(Of TaskItem)
 
     Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
+        tasks = outlookClient.AllTasks
+
+
+
         ' tasks = DummyTasks.GetTasks
 
 
