@@ -1,0 +1,8 @@
+F:\BackUp\DoLate\DoLate\Payments\bin\Debug\Payments.dll
+F:\BackUp\DoLate\DoLate\Payments\bin\Debug\Payments.pdb
+F:\BackUp\DoLate\DoLate\Payments\bin\Debug\Payments.xml
+F:\BackUp\DoLate\DoLate\Payments\obj\Debug\Payments.Resources.resources
+F:\BackUp\DoLate\DoLate\Payments\obj\Debug\Payments.vbproj.GenerateResource.Cache
+F:\BackUp\DoLate\DoLate\Payments\obj\Debug\Payments.dll
+F:\BackUp\DoLate\DoLate\Payments\obj\Debug\Payments.xml
+F:\BackUp\DoLate\DoLate\Payments\obj\Debug\Payments.pdb
