@@ -29,6 +29,15 @@ Public Class NotificationWindow
     Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
         tasksXdoc = XDocument.Load("Tasks.xml")
 
+        lblTotalPaid.Text = "£" & tasksXdoc.Root.@TotalPaid
+
+        For Each t In tasksXdoc.Root.<Task>
+            Dim task As New DummyTask
+            task.MyXDoc = tasksXdoc
+            task.PopulateFromXML(t)
+            tasks.Add(task)
+        Next
+
         For Each t In oclient.AllTasks
             Dim task As New DummyTask
             task.MyXDoc = tasksXdoc
@@ -39,15 +48,6 @@ Public Class NotificationWindow
             task.Body = t.Body
 
             AddTaskItem(task)
-        Next
-
-        lblTotalPaid.Text = "£" & tasksXdoc.Root.@TotalPaid
-
-        For Each t In tasksXdoc.Root.<Task>
-            Dim task As New DummyTask
-            task.MyXDoc = tasksXdoc
-            task.PopulateFromXML(t)
-            tasks.Add(task)
         Next
 
         RefreshList()

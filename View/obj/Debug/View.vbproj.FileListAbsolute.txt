@@ -61,3 +61,8 @@ F:\BackUp\DoLate\DoLate\View\obj\Debug\View.vbprojResolveAssemblyReference.cache
 F:\BackUp\DoLate\DoLate\View\bin\Debug\OutlookSync.exe
 F:\BackUp\DoLate\DoLate\View\bin\Debug\OutlookSync.pdb
 F:\BackUp\DoLate\DoLate\View\obj\Debug\View.vbproj.ResolveComReference.cache
+F:\BackUp\DoLate\DoLate\View\obj\Debug\Calendar.baml
+F:\BackUp\DoLate\DoLate\View\obj\Debug\Calendar.g.vb
+F:\BackUp\DoLate\DoLate\View\obj\Debug\Settings.baml
+F:\BackUp\DoLate\DoLate\View\obj\Debug\Settings.g.vb
+F:\BackUp\DoLate\DoLate\View\bin\Debug\Tasks.xml

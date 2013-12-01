@@ -6,7 +6,23 @@ View
 </name>
 </assembly>
 <members>
-<member name="M:View.Application.InitializeComponent">
+<member name="M:View.Settings.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:View.Settings">
+	<summary>
+Settings
+</summary>
+</member><member name="M:View.MyCalendar.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:View.MyCalendar">
+	<summary>
+MyCalendar
+</summary>
+</member><member name="M:View.Application.InitializeComponent">
 	<summary>
 InitializeComponent
 </summary>
