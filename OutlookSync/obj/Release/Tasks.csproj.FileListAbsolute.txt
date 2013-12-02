@@ -1,0 +1,6 @@
+F:\BackUp\DoLate\DoLate\OutlookSync\bin\Release\OutlookSync.exe.config
+F:\BackUp\DoLate\DoLate\OutlookSync\bin\Release\OutlookSync.exe
+F:\BackUp\DoLate\DoLate\OutlookSync\bin\Release\OutlookSync.pdb
+F:\BackUp\DoLate\DoLate\OutlookSync\obj\Release\Tasks.csproj.ResolveComReference.cache
+F:\BackUp\DoLate\DoLate\OutlookSync\obj\Release\OutlookSync.exe
+F:\BackUp\DoLate\DoLate\OutlookSync\obj\Release\OutlookSync.pdb
