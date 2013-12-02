@@ -1,0 +1,86 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+View
+</name>
+</assembly>
+<members>
+<member name="M:View.NotificationWindow.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:View.NotificationWindow">
+	<summary>
+NotificationWindow
+</summary>
+</member><member name="M:View.Application.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:View.Application.Main">
+	<summary>
+Application Entry Point.
+</summary>
+</member><member name="T:View.Application">
+	<summary>
+Application
+</summary>
+</member><member name="M:View.Settings.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:View.Settings">
+	<summary>
+Settings
+</summary>
+</member><member name="M:View.MyCalendar.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:View.MyCalendar">
+	<summary>
+MyCalendar
+</summary>
+</member><member name="P:View.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:View.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:View.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="P:View.My.MyWpfExtension.Application">
+	<summary>
+ Returns the application object for the running application
+ </summary>
+</member><member name="P:View.My.MyWpfExtension.Computer">
+	<summary>
+ Returns information about the host computer.
+ </summary>
+</member><member name="P:View.My.MyWpfExtension.User">
+	<summary>
+ Returns information for the current user.  If you wish to run the application with the current 
+ Windows user credentials, call My.User.InitializeWithWindowsUser().
+ </summary>
+</member><member name="P:View.My.MyWpfExtension.Log">
+	<summary>
+ Returns the application log. The listeners can be configured by the application's configuration file.
+ </summary>
+</member><member name="P:View.My.MyWpfExtension.Windows">
+	<summary>
+ Returns the collection of Windows defined in the project.
+ </summary>
+</member><member name="T:View.My.MyWpfExtension">
+	<summary>
+ Module used to define the properties that are available in the My Namespace for WPF
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

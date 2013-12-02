@@ -1,0 +1,7 @@
+C:\HackingTheCity\DoLate\OutlookSync\bin\Debug\OutlookSync.exe.config
+C:\HackingTheCity\DoLate\OutlookSync\bin\Debug\OutlookSync.exe
+C:\HackingTheCity\DoLate\OutlookSync\bin\Debug\OutlookSync.pdb
+C:\HackingTheCity\DoLate\OutlookSync\obj\Debug\OutlookSync.csprojResolveAssemblyReference.cache
+C:\HackingTheCity\DoLate\OutlookSync\obj\Debug\OutlookSync.csproj.ResolveComReference.cache
+C:\HackingTheCity\DoLate\OutlookSync\obj\Debug\OutlookSync.exe
+C:\HackingTheCity\DoLate\OutlookSync\obj\Debug\OutlookSync.pdb

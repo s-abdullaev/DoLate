@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+F:\BackUp\DoLate\DoLate\Payments\bin\Debug\Payments.dll
+F:\BackUp\DoLate\DoLate\Payments\bin\Debug\Payments.pdb
+F:\BackUp\DoLate\DoLate\Payments\bin\Debug\Payments.xml
+F:\BackUp\DoLate\DoLate\Payments\obj\Debug\Payments.Resources.resources
+F:\BackUp\DoLate\DoLate\Payments\obj\Debug\Payments.vbproj.GenerateResource.Cache
+F:\BackUp\DoLate\DoLate\Payments\obj\Debug\Payments.dll
+F:\BackUp\DoLate\DoLate\Payments\obj\Debug\Payments.xml
+F:\BackUp\DoLate\DoLate\Payments\obj\Debug\Payments.pdb
+=======
+C:\HackingTheCity\DoLate\Payments\bin\Debug\Payments.dll
+C:\HackingTheCity\DoLate\Payments\bin\Debug\Payments.pdb
+C:\HackingTheCity\DoLate\Payments\bin\Debug\Payments.xml
+C:\HackingTheCity\DoLate\Payments\obj\Debug\Payments.Resources.resources
+C:\HackingTheCity\DoLate\Payments\obj\Debug\Payments.vbproj.GenerateResource.Cache
+C:\HackingTheCity\DoLate\Payments\obj\Debug\Payments.dll
+C:\HackingTheCity\DoLate\Payments\obj\Debug\Payments.xml
+C:\HackingTheCity\DoLate\Payments\obj\Debug\Payments.pdb
+>>>>>>> 8880d2d46848a2f9c4f84048834fa27be3ab42ad
